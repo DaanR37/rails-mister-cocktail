@@ -17,21 +17,12 @@ class CocktailsController < ApplicationController
       redirect_to cocktail_path(@cocktail)
     else
       render 'new'
+    end
   end
-end
 
 private
 
-def cocktail_params
+  def cocktail_params
     params.require(:cocktail).permit(:name, :doses, :ingredients)
   end
 end
-
-
-# A user can see the list of cocktails
-# GET "cocktails"
-# A user can see the details of a given cocktail, with the dose needed for each ingredient
-# GET "cocktails/42"
-# A user can create a new cocktail
-# GET "cocktails/new"
-# POST "cocktails"

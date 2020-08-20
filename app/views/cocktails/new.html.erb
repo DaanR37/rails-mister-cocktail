@@ -1,2 +1,23 @@
 <h1>Cocktails#new</h1>
-<p>Find me in app/views/cocktails/new.html.erb</p>
+
+<div class="content">
+  <div class="row">
+    <div class="col-md-12">
+      <h2> Add a new cocktail </h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <%= form_for(@cocktail) do |f| %>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+      <%= f.submit %>
+      <% end %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <p><%= link_to "Back to Cocktails", "/cocktails" %></p>
+    </div>
+  </div>
+</div>
