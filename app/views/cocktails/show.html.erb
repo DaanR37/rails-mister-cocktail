@@ -7,9 +7,13 @@
       <table class="table table-bordered">
         <div class="row">
           <div class="col-md-12">
-            <p><%= link_to "Back to Cocktails", "/cocktails" %></p>
+            <p><%= link_to "Back to Cocktails", cocktails_path %></p>
+            <p><%= link_to "Add new dose", new_cocktail_dose_path(@cocktail) %></p>
           </div>
         </div>
+        <% @doses.each do |dose| %>
+      <p><%= dose.description %></p>
+    <% end %>
       </table>
     </div>
   </div>
