@@ -6,4 +6,8 @@ Rails.application.routes.draw do
     resources :doses, only: [:new, :create]
   end
   resources :doses, only: [:index, :create]
+  root to: 'articles#index'
+  resources :articles, except: :index
 end
+
+
